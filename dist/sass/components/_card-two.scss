@@ -1,0 +1,106 @@
+.card-two {
+  @include content-center;
+  background: $color-black;
+  padding: 4rem 2rem 0rem 2rem;
+  margin-bottom: 4rem;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  overflow: hidden;
+
+  &__box--container {
+    width: 100%;
+    max-width: 33rem;
+    z-index: 1;
+  }
+
+  &__box {
+    width: 100%;
+    background: $color-black-light;
+    border-radius: 15px;
+
+    .profile {
+      padding-top: 3.5rem;
+      &__img {
+        width: 100%;
+        max-width: 175px;
+        height: 175px;
+        object-fit: cover;
+        border-radius: 50%;
+        border: 8px solid $color-purple;
+        outline: 14px solid $color-black-lighter;
+
+        @include respond(tab-land) {
+          max-width: 135px;
+          height: 135px;
+        }
+      }
+    }
+
+    .heading {
+      margin-top: 2.5rem;
+      &--main {
+        margin: 0;
+        font-size: 4.5rem;
+        font-weight: bold;
+        font-family: "Poppins", sans-serif;
+        background: #7e5bcb;
+        background: linear-gradient(to right, #7e5bcb 0%, #eb6f7c 100%);
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+
+        &:nth-child(1) {
+          line-height: 1;
+        }
+      }
+
+      &--sub {
+        font-size: 1.3rem;
+        font-weight: 300;
+        line-height: 1.7;
+        color: $color-gray;
+        padding: 0rem 2rem 0.5rem 2rem;
+      }
+
+      .line {
+        width: 90%;
+        height: 0.01rem;
+        background: $color-gray;
+        margin: 3rem auto;
+
+        @include respond(tab-port) {
+          margin: 2rem auto;
+        }
+      }
+    }
+
+    .down_icon {
+      padding-bottom: 3.5rem;
+      a {
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        display: block;
+        margin: 0 auto;
+        text-decoration: none;
+        background: $color-black-lighter;
+        color: $color-purple;
+        font-size: 2.5rem;
+        transition: all 0.2s;
+        @include content-center;
+
+        &:hover {
+          background: $color-purple;
+          color: $color-black-lighter;
+        }
+      }
+    }
+  }
+
+  &__dot-box {
+    width: 50%;
+    height: 2.2rem;
+    border-right: 5px dotted $color-purple;
+  }
+}

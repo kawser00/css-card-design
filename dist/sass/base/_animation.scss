@@ -1,0 +1,115 @@
+//card one animated background
+.cube {
+  position: absolute;
+  top: 74vh;
+  left: 45vw;
+  width: 40px;
+  height: 40px;
+  background: #ffffff4f;
+  border-radius: 2px;
+  animation: cube 1.5s ease-in forwards infinite;
+  
+  &:nth-child(2) {
+    animation-delay: 2s;
+    left: 15vw;
+    top: 40vh;
+  }
+  
+  &:nth-child(3) {
+    animation-delay: 4s;
+    left: 87vw;
+    top: 40vh;
+  }
+  
+  &:nth-child(4) {
+    animation-delay: 6s;
+    left: 90vw;
+    top: 8vh;
+  }
+  
+  &:nth-child(5) {
+    animation-delay: 8s;
+    left: 90vw;
+    top: 70vh;
+  }
+  
+  &:nth-child(6) {
+    animation-delay: 10s;
+    left: 63vw;
+    top: 8vh;
+  }
+
+  &:nth-child(7) {
+    animation-delay: 12s;
+    left: 8vw;
+    top: 20vh;
+  }
+
+  &:nth-child(8) {
+    animation-delay: 3s;
+    left: 8vw;
+    top: 65vh;
+  }
+  &:nth-child(9) {
+    animation-delay: 3s;
+    left: 20vw;
+    top: 8vh;
+  }
+  &:nth-child(10) {
+    animation-delay: 6s;
+    left: 20vw;
+    top: 60vh;
+  }
+  &:nth-child(11) {
+    animation-delay: 8s;
+    left: 80vw;
+    top: 64vh;
+  }
+  &:nth-child(12) {
+    animation-delay: 2s;
+    left: 80vw;
+    top: 18vh;
+  }
+
+  &:nth-child(13) {
+    animation-delay: 10s;
+    left: 38vw;
+    top: 8vh;
+  }
+  &:nth-child(14) {
+    animation-delay: 4s;
+    left: 58vw;
+    top: 74vh;
+  }
+}
+
+@keyframes cube {
+  0% {
+    transform: translate(-50%, -50%);   
+    opacity: 1;
+  }
+  100% {
+    transform: translate(-30%, -50%); 
+    opacity: 0;
+  }
+}
+
+//card two animated background
+.line_wrap {
+  width: 200%;
+  height: 110%;
+  position: absolute;
+  background-image: -webkit-linear-gradient(rgb(139 145 157 / 13%) 0.6px, transparent 0.6px), -webkit-linear-gradient(left, rgb(139 145 157 / 19%) 0.6px, transparent 0.6px);
+  background-size: 100px 100px,100px 100px;
+  background-position: -1px -1px,-1px -1px;
+  animation: lineMove 2s infinite linear;
+}
+
+@keyframes lineMove {
+  from {
+    background-position: 0px -100px,0px 0px;
+  }
+  to {
+    background-position: 0px 0px, 100px 0px;
+  }
+}
